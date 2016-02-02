@@ -13,11 +13,15 @@ block content
             span= __("Watch the video to learn how it works")
             i.fa.fa-play
 
-        .banner-video__video-wrapper
-          div.video-box.video-box-page(data-video-id="vid03",data-video-version="1",data-video-youtube="ScrRZuaXtV0",data-video-cc="1",data-video-run-followup="1")
-            img.rfcx-trans-linear.video-box-poster(src="#{rfcx_static_cdn}/video/vid01/vid01-poster.jpg?v=#{app_version}", alt="")
-            img.rfcx-trans-linear.rfcx-trans-25.video-box-bg(src="#{rfcx_cdn}/img/intro/16x9.16.gif", alt="")
-            i.rfcx-trans-linear.fa.fa-play-circle-o
+        .video-main
+          .video-main__wrapper
+            .video-main__poster(style="background: url(#{rfcx_static_cdn}/video/vid01/vid01-poster.jpg?v=#{app_version})")
+            iframe.video-main__iframe#videoMainIframe(width="100%" height="100%" src="https://www.youtube.com/embed/ScrRZuaXtV0?version=3&enablejsapi=1" frameborder="0" allowfullscreen="1")
+        //.banner-video__video-wrapper
+        //  div.video-box.video-box-page(data-video-id="vid03",data-video-version="1",data-video-youtube="ScrRZuaXtV0",data-video-cc="1",data-video-run-followup="1")
+        //    img.rfcx-trans-linear.video-box-poster(src="#{rfcx_static_cdn}/video/vid01/vid01-poster.jpg?v=#{app_version}", alt="")
+        //    img.rfcx-trans-linear.rfcx-trans-25.video-box-bg(src="#{rfcx_cdn}/img/intro/16x9.16.gif", alt="")
+        //    i.rfcx-trans-linear.fa.fa-play-circle-o
 
         div.control-group.rfcx-crnr-5
           include common/donate-form
